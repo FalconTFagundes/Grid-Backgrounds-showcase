@@ -146,10 +146,8 @@ Contribuições são sempre bem-vindas! Se você tem ideias para novos efeitos d
 ## 📸 Screenshots
 
 ### Desktop
-![Desktop View](https://via.placeholder.com/800x500/0a0a0a/0066FF?text=Desktop+View)
+<img width="961" height="1052" alt="1" src="https://github.com/user-attachments/assets/bb30a05c-8cda-47f8-824b-9e48acbfb7a3" />
 
-### Mobile
-![Mobile View](https://via.placeholder.com/400x700/0a0a0a/0066FF?text=Mobile+View)
 
 ---
 
