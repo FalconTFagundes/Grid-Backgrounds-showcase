@@ -6,12 +6,6 @@
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-## 🌟 Demo
-
-[**🔗 Ver Demo ao Vivo**](https://seu-usuario.github.io/grid-backgrounds-showcase)
-
-![Grid Backgrounds Preview](https://via.placeholder.com/800x400/0a0a0a/0066FF?text=Grid+Backgrounds+Showcase)
-
 ---
 
 ## 📋 Sobre o Projeto
@@ -171,12 +165,6 @@ Contribuições são sempre bem-vindas! Se você tem ideias para novos efeitos d
 
 ---
 
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
 ## 👨‍💻 Autor
 
 **Rafael Fagundes**
@@ -184,7 +172,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 - 🌐 Portfolio: [falcontfagundes.github.io/my-portfolio](https://falcontfagundes.github.io/my-portfolio)
 - 💼 LinkedIn: [@rafael-fagundes](https://www.linkedin.com/in/rafael-fagundes-518974258)
 - 🐱 GitHub: [@FalconTFagundes](https://github.com/FalconTFagundes)
-- 📸 Instagram: [@fagundes.icm](https://www.instagram.com/fagundes.icm)
+- 📸 Instagram: [@fagundes.rf](https://www.instagram.com/fagundes.rf)
 
 ---
 
