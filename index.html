@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeitos de Grid Background - Escolha o seu!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #000;
+            color: #fff;
+            padding: 2rem;
+        }
+
+        .demo-container {
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .demo-box {
+            height: 400px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            border: 2px solid #333;
+        }
+
+        .demo-content {
+            position: relative;
+            z-index: 2;
+            padding: 3rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #0066FF;
+        }
+
+        p {
+            text-align: center;
+            color: #999;
+            max-width: 600px;
+        }
+
+        .code-snippet {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            overflow-x: auto;
+        }
+
+        pre {
+            color: #0066FF;
+            font-size: 0.9rem;
+            white-space: pre-wrap;
+        }
+
+        /* ========================================
+           OPÇÃO 1: Grid Sutil (Linhas Finas)
+        ======================================== */
+        .grid-subtle {
+            background-color: #ffffff;
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .grid-subtle .demo-content {
+            color: #000;
+        }
+
+        .grid-subtle h2 {
+            color: #0066FF;
+        }
+
+        .grid-subtle p {
+            color: #666;
+        }
+
+        /* ========================================
+           OPÇÃO 2: Grid Tech (Azul Neon)
+        ======================================== */
+        .grid-tech {
+            background-color: #0a0a0a;
+            background-image:
+                linear-gradient(rgba(0, 102, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 102, 255, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* ========================================
+           OPÇÃO 3: Grid Dots (Pontos)
+        ======================================== */
+        .grid-dots {
+            background-color: #ffffff;
+            background-image: radial-gradient(circle, rgba(0, 0, 0, 0.15) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        .grid-dots .demo-content {
+            color: #000;
+        }
+
+        .grid-dots h2 {
+            color: #0066FF;
+        }
+
+        .grid-dots p {
+            color: #666;
+        }
+
+        /* ========================================
+           OPÇÃO 4: Grid Isométrico
+        ======================================== */
+        .grid-isometric {
+            background-color: #0a0a0a;
+            background-image:
+                linear-gradient(30deg, rgba(0, 102, 255, 0.08) 12%, transparent 12.5%, transparent 87%, rgba(0, 102, 255, 0.08) 87.5%, rgba(0, 102, 255, 0.08)),
+                linear-gradient(150deg, rgba(0, 102, 255, 0.08) 12%, transparent 12.5%, transparent 87%, rgba(0, 102, 255, 0.08) 87.5%, rgba(0, 102, 255, 0.08)),
+                linear-gradient(30deg, rgba(0, 102, 255, 0.08) 12%, transparent 12.5%, transparent 87%, rgba(0, 102, 255, 0.08) 87.5%, rgba(0, 102, 255, 0.08)),
+                linear-gradient(150deg, rgba(0, 102, 255, 0.08) 12%, transparent 12.5%, transparent 87%, rgba(0, 102, 255, 0.08) 87.5%, rgba(0, 102, 255, 0.08)),
+                linear-gradient(60deg, rgba(0, 217, 165, 0.05) 25%, transparent 25.5%, transparent 75%, rgba(0, 217, 165, 0.05) 75%, rgba(0, 217, 165, 0.05)),
+                linear-gradient(60deg, rgba(0, 217, 165, 0.05) 25%, transparent 25.5%, transparent 75%, rgba(0, 217, 165, 0.05) 75%, rgba(0, 217, 165, 0.05));
+            background-size: 80px 140px;
+            background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+        }
+
+        /* ========================================
+           OPÇÃO 5: Grid Animado (Blueprint)
+        ======================================== */
+        .grid-animated {
+            background-color: #0a0e1a;
+            background-image:
+                linear-gradient(rgba(0, 102, 255, 0.15) 2px, transparent 2px),
+                linear-gradient(90deg, rgba(0, 102, 255, 0.15) 2px, transparent 2px),
+                linear-gradient(rgba(0, 102, 255, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 102, 255, 0.08) 1px, transparent 1px);
+            background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+            background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+            animation: grid-move 20s linear infinite;
+        }
+
+        @keyframes grid-move {
+            0% {
+                background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+            }
+
+            100% {
+                background-position: 98px 98px, 98px 98px, 19px 19px, 19px 19px;
+            }
+        }
+
+        /* ========================================
+           OPÇÃO 6: Grid Perspectiva (3D Effect)
+        ======================================== */
+        .grid-perspective {
+            background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .grid-perspective::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                linear-gradient(rgba(0, 102, 255, 0.2) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 102, 255, 0.2) 1px, transparent 1px);
+            background-size: 50px 50px;
+            transform: perspective(500px) rotateX(60deg);
+            transform-origin: center bottom;
+            opacity: 0.5;
+        }
+
+        /* ========================================
+           OPÇÃO 7: Grid + Gradiente
+        ======================================== */
+        .grid-gradient {
+            background:
+                radial-gradient(circle at 20% 50%, rgba(0, 102, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 217, 165, 0.15) 0%, transparent 50%),
+                linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+                linear-gradient(180deg, #ffffff 0%, #f8f9fb 100%);
+            background-size: auto, auto, 40px 40px, 40px 40px, auto;
+        }
+
+        .grid-gradient .demo-content {
+            color: #000;
+        }
+
+        .grid-gradient h2 {
+            color: #0066FF;
+        }
+
+        .grid-gradient p {
+            color: #666;
+        }
+
+        /* ========================================
+           OPÇÃO 8: Micro Grid (Muito Sutil)
+        ======================================== */
+        .grid-micro {
+            background-color: #ffffff;
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .grid-micro .demo-content {
+            color: #000;
+        }
+
+        .grid-micro h2 {
+            color: #0066FF;
+        }
+
+        .grid-micro p {
+            color: #666;
+        }
+
+        .label {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(0, 102, 255, 0.9);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🎨 Escolha seu Efeito de Grid Background</h1>
+    <p style="text-align: center; margin-bottom: 3rem; font-size: 1.2rem;">
+        Role para baixo e veja as 8 opções diferentes!
+    </p>
+
+    <div class="demo-container">
+        <!-- OPÇÃO 1 -->
+        <div class="demo-box grid-subtle">
+            <div class="label">Opção 1: Grid Sutil</div>
+            <div class="demo-content">
+                <h2>Grid Clássico</h2>
+                <p>Linhas finas e sutis. Perfeito para fundo claro e profissional.</p>
+                <div class="code-snippet">
+                    <pre>background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+background-size: 50px 50px;</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- OPÇÃO 2 -->
+        <div class="demo-box grid-tech">
+            <div class="label">Opção 2: Grid Tech (Azul Neon)</div>
+            <div class="demo-content">
+                <h2>Tech Blueprint</h2>
+                <p>Grid com cor azul neon. Visual tech e moderno para fundo escuro.</p>
+                <div class="code-snippet">
+                    <pre>background-color: #0a0a0a;
+background-image: 
+  linear-gradient(rgba(0, 102, 255, 0.1) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(0, 102, 255, 0.1) 1px, transparent 1px);
+background-size: 40px 40px;</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- OPÇÃO 3 -->
+        <div class="demo-box grid-dots">
+            <div class="label">Opção 3: Grid de Pontos</div>
+            <div class="demo-content">
+                <h2>Dot Pattern</h2>
+                <p>Pontos ao invés de linhas. Estilo minimalista e elegante.</p>
+                <div class="code-snippet">
+                    <pre>background-image: 
+  radial-gradient(circle, rgba(0, 0, 0, 0.15) 1px, transparent 1px);
+background-size: 24px 24px;</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- OPÇÃO 4 -->
+        <div class="demo-box grid-isometric">
+            <div class="label">Opção 4: Grid Isométrico</div>
+            <div class="demo-content">
+                <h2>Isometric Grid</h2>
+                <p>Padrão isométrico complexo. Visual único e diferenciado.</p>
+                <div class="code-snippet">
+                    <pre>/* Grid isométrico com múltiplas camadas */
+/* Veja o código fonte completo */</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- OPÇÃO 5 -->
+        <div class="demo-box grid-animated">
+            <div class="label">Opção 5: Grid Animado (Blueprint)</div>
+            <div class="demo-content">
+                <h2>Animated Blueprint</h2>
+                <p>Grid que se move lentamente. Efeito sutil de movimento.</p>
+                <div class="code-snippet">
+                    <pre>/* Grid com animação suave */
+animation: grid-move 20s linear infinite;</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- OPÇÃO 6 -->
+        <div class="demo-box grid-perspective">
+            <div class="label">Opção 6: Grid Perspectiva 3D</div>
+            <div class="demo-content">
+                <h2>3D Perspective</h2>
+                <p>Grid com efeito de perspectiva 3D. Visual cyberpunk.</p>
+                <div class="code-snippet">
+                    <pre>transform: perspective(500px) rotateX(60deg);
+transform-origin: center bottom;</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- OPÇÃO 7 -->
+        <div class="demo-box grid-gradient">
+            <div class="label">Opção 7: Grid + Gradiente</div>
+            <div class="demo-content">
+                <h2>Grid com Gradiente</h2>
+                <p>Combina grid sutil com gradientes radiais coloridos.</p>
+                <div class="code-snippet">
+                    <pre>/* Grid + gradientes radiais suaves */
+background: radial-gradient(...), linear-gradient(...);</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- OPÇÃO 8 -->
+        <div class="demo-box grid-micro">
+            <div class="label">Opção 8: Micro Grid (Ultra Sutil)</div>
+            <div class="demo-content">
+                <h2>Micro Pattern</h2>
+                <p>Grid quase invisível. Adiciona textura sem chamar atenção.</p>
+                <div class="code-snippet">
+                    <pre>background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+background-size: 20px 20px;</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; padding: 3rem; border-top: 1px solid #333; margin-top: 3rem;">
+        <h2 style="color: #0066FF; margin-bottom: 1rem;">Como Aplicar no Seu Portfolio?</h2>
+        <p style="max-width: 800px; margin: 0 auto; line-height: 1.6;">
+            Escolha a opção que mais gostou e copie o código CSS correspondente.<br>
+            Cole dentro da tag <code
+                style="background: #1a1a1a; padding: 0.2rem 0.5rem; border-radius: 4px; color: #0066FF;">&lt;style&gt;</code>
+            do seu HTML,
+            aplicando no elemento <code
+                style="background: #1a1a1a; padding: 0.2rem 0.5rem; border-radius: 4px; color: #0066FF;">body</code> ou
+            em uma
+            <code
+                style="background: #1a1a1a; padding: 0.2rem 0.5rem; border-radius: 4px; color: #0066FF;">.section</code>
+            específica!
+        </p>
+    </div>
+</body>
+
+</html>
