@@ -14,7 +14,7 @@ Este projeto nasceu da necessidade de ter opções práticas e prontas de backgr
 
 ### ✨ Características
 
-- 🎯 **8 Efeitos Únicos** - Diferentes estilos de grid para cada necessidade
+- 🎯 **Efeitos Únicos** - Diferentes estilos de grid para cada necessidade
 - 🖼️ **Preview Interativo** - Veja todos os efeitos em ação na mesma página
 - 📱 **Responsivo** - Funciona perfeitamente em desktop e mobile
 - 📝 **Código Pronto** - Copy & paste direto para seu projeto
